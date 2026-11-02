@@ -1,7 +1,8 @@
 # yaml-language-server: $schema=https://mkdocs-ng.github.io/mkdocs/schema.json
 #
-# English site. The Chinese site in mkdocs.zh.yml inherits everything here.
-# Change these first: site_name, site_description, site_url, repo_url.
+# One file for both languages: English at the root of the site, Chinese at /zh/.
+# Change these first: site_name, site_description, site_url, repo_url, and the
+# same keys under languages.zh.
 
 site_name: My Project
 site_description: One sentence that says what My Project does and who it is for.
@@ -18,6 +19,29 @@ theme:
   # logo: assets/logo.svg  # an image in docs/; the Sumi mark is used until you set one
   # social_image: assets/social.png   # share preview (Sumi 0.2+)
 
+# The first language is the default. Each other one is built into /<code>/ and
+# can override any setting above. Chinese pages live in docs-zh/, with the same
+# paths as docs/; a page without a translation is shown in English with a note.
+languages:
+  en: English
+  zh:
+    name: 简体中文
+    site_name: 我的项目
+    site_description: 用一句话说明这个项目做什么、给谁用。
+    docs_dir: docs-zh
+    edit_uri: edit/main/docs-zh/
+    nav:
+      - 首页: index.md
+      - 指南:
+        - guide/index.md
+        - 安装: guide/install.md
+        - 快速开始: guide/quick-start.md
+        - 编写文档: guide/writing.md
+      - 参考:
+        - 配置: reference/configuration.md
+      - 版本发布: releases.md
+      - 博客: blog/index.md
+
 plugins:
   - search
   - llms_txt:              # llms.txt plus a Markdown copy of every page, for AI agents
@@ -28,9 +52,6 @@ plugins:
       #   layout: cards    # card view for the blog index (Sumi 0.2+)
 
 extra:
-  alternate:
-    - {name: English, link: ./, lang: en}
-    - {name: 简体中文, link: zh/, lang: zh}
   social:
     - {icon: brand-github, link: "https://github.com/example/my-project", name: GitHub}
 

@@ -25,10 +25,8 @@ jobs:
           python-version: "3.13"
           cache: pip
       - run: pip install -r requirements.txt
-      - name: Build the English site
+      - name: Build the site (all languages)
         run: mkdocs build --strict
-      - name: Build the Chinese site
-        run: mkdocs build --strict -f mkdocs.zh.yml
       - if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:

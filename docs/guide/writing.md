@@ -10,8 +10,8 @@ These pages use the [Sumi](https://mkdocs-ng.github.io/mkdocs-sumi/) theme for [
 
 ```sh
 pip install -r requirements.txt
-mkdocs serve                     # English, at http://127.0.0.1:8000/
-mkdocs serve -f mkdocs.zh.yml    # Chinese
+mkdocs serve                  # http://127.0.0.1:8000/, Chinese under zh/
+mkdocs serve --language zh    # only Chinese, faster
 ```
 
 ## Where things live
@@ -27,8 +27,7 @@ docs/                 # English pages
     ├── .authors.yml
     └── posts/        # one file per post, named YYYY-MM-DD-slug.md
 docs-zh/              # Chinese pages, same layout
-mkdocs.yml            # English site settings
-mkdocs.zh.yml         # Chinese site settings (inherits mkdocs.yml)
+mkdocs.yml            # settings for both languages
 ```
 
 ## Components
@@ -51,7 +50,7 @@ See the [Sumi component guide](https://mkdocs-ng.github.io/mkdocs-sumi/docs/writ
 ## Before you open a pull request
 
 ```sh
-mkdocs build --strict && mkdocs build --strict -f mkdocs.zh.yml
+mkdocs build --strict
 ```
 
 `--strict` turns broken links and missing pages into errors. CI runs the same command.
