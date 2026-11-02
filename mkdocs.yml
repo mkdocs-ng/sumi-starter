@@ -17,7 +17,7 @@ theme:
   locale: en
   accent: vermilion        # indigo, moss, plum, ochre, teal, ink, or any CSS colour
   # logo: assets/logo.svg  # an image in docs/; the Sumi mark is used until you set one
-  # social_image: assets/social.png   # share preview (Sumi 0.2+)
+  # social_image: assets/social.png   # share preview image, about 1200x630
 
 # The first language is the default. Each other one is built into /<code>/ and
 # can override any setting above. Chinese pages live in docs-zh/, with the same
@@ -48,8 +48,8 @@ plugins:
       full_output: true
   - sumi:
       git_dates: true      # "last updated" from Git history
-      # blog:
-      #   layout: cards    # card view for the blog index (Sumi 0.2+)
+      blog:
+        layout: cards      # or: list
 
 extra:
   social:
