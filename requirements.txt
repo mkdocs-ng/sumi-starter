@@ -1,2 +1,2 @@
 # MkDocs NG and the Sumi theme. Pin exact versions here for reproducible builds.
-mkdocs-sumi>=0.1.2
+mkdocs-sumi>=0.2.0
