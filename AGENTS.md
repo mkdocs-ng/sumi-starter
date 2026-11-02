@@ -6,20 +6,20 @@ This repository is a documentation site built with MkDocs NG and the Sumi theme.
 
 ```sh
 pip install -r requirements.txt
-mkdocs serve                                          # preview English at http://127.0.0.1:8000/
-mkdocs serve -f mkdocs.zh.yml                         # preview Chinese
-mkdocs build --strict && mkdocs build --strict -f mkdocs.zh.yml   # what CI runs; must pass
+mkdocs serve                 # preview at http://127.0.0.1:8000/ (Chinese under zh/)
+mkdocs serve --language zh   # only one language, faster
+mkdocs build --strict        # what CI runs, builds every language; must pass
 ```
 
-Always run the strict builds before you finish. Broken links, missing nav entries and unknown config keys fail them.
+Always run the strict build before you finish. Broken links, missing nav entries and unknown config keys fail them.
 
 ## Layout
 
-- `mkdocs.yml` — English site settings and `nav`. Every new page must be added to `nav`.
-- `mkdocs.zh.yml` — Chinese site. `INHERIT`s `mkdocs.yml`; overrides `docs_dir`, `site_dir`, `theme.locale`, `nav` and `extra.alternate`.
-- `docs/` — English pages. `docs-zh/` — Chinese pages, same paths. Not every page needs a translation.
+- `mkdocs.yml` — all settings and the English `nav`. Every new page must be added to `nav`, and to `languages.zh.nav`.
+- `languages` in `mkdocs.yml` — English is the default (site root), Chinese is built into `/zh/`. `languages.zh` overrides `site_name`, `site_description`, `docs_dir`, `edit_uri` and `nav` for Chinese. The language menu is generated; don't add `extra.alternate`.
+- `docs/` — English pages. `docs-zh/` — Chinese pages, same paths. Not every page needs a translation: a missing one is shown in English with a note.
 - `docs/index.md` — the home page. Its content is YAML front matter (`hero`, `sections`) for Sumi's `landing.html` template, not Markdown body text.
-- `docs/releases.yml` — release data, newest first, shared by both languages. `docs/releases.md` only holds the intro.
+- `docs/releases.yml` — release data, newest first, shared by both languages (the Chinese site uses `docs/` files that `docs-zh/` doesn't have). `docs/releases.md` only holds the intro.
 - `docs/blog/posts/YYYY-MM-DD-slug.md` — blog posts with `date`, `authors`, `tags`, `description` front matter. Authors are in `docs/blog/.authors.yml`.
 
 ## Writing rules
