@@ -1,8 +1,8 @@
 # Sumi Starter
 
-A ready-to-publish documentation site for your project, built with [MkDocs NG](https://mkdocs-ng.github.io/mkdocs/) and the [Sumi](https://mkdocs-ng.github.io/mkdocs-sumi/) theme. It has a home page, a guide, a configuration reference, release notes with downloads, a blog, and an English and a Chinese edition. Every page is plain Markdown.
+A ready-to-publish documentation site for your project, built with [MkDocs NG](https://mkdocs-ng.org/) and the [Sumi](https://sumi.mkdocs-ng.org/) theme. It has a home page, a guide, a configuration reference, release notes with downloads, a blog, and an English and a Chinese edition. Every page is plain Markdown.
 
-**[Use this template](https://github.com/new?template_name=sumi-starter&template_owner=mkdocs-ng)** · [Sumi docs](https://mkdocs-ng.github.io/mkdocs-sumi/) · [Components](https://mkdocs-ng.github.io/mkdocs-sumi/docs/write/)
+**[Use this template](https://github.com/new?template_name=sumi-starter&template_owner=mkdocs-ng)** · [Sumi docs](https://sumi.mkdocs-ng.org/) · [Components](https://sumi.mkdocs-ng.org/docs/write/)
 
 ## Try it locally
 

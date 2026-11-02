@@ -4,7 +4,7 @@ description: How to write and preview these docs. Every component is plain Markd
 
 # Writing docs
 
-These pages use the [Sumi](https://mkdocs-ng.github.io/mkdocs-sumi/) theme for [MkDocs NG](https://mkdocs-ng.github.io/mkdocs/). Everything is plain Markdown, so the files read well on GitHub too.
+These pages use the [Sumi](https://sumi.mkdocs-ng.org/) theme for [MkDocs NG](https://mkdocs-ng.org/). Everything is plain Markdown, so the files read well on GitHub too.
 
 ## Preview locally
 
@@ -45,7 +45,7 @@ mkdocs.yml            # settings for both languages
 | `++Ctrl+K++` | Keys. |
 {.wide}
 
-See the [Sumi component guide](https://mkdocs-ng.github.io/mkdocs-sumi/docs/write/) for all of them.
+See the [Sumi component guide](https://sumi.mkdocs-ng.org/docs/write/) for all of them.
 
 ## Before you open a pull request
 

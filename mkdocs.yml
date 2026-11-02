@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://mkdocs-ng.github.io/mkdocs/schema.json
+# yaml-language-server: $schema=https://mkdocs-ng.org/schema.json
 #
 # One file for both languages: English at the root of the site, Chinese at /zh/.
 # Change these first: site_name, site_description, site_url, repo_url, and the
@@ -17,7 +17,7 @@ theme:
   locale: en
   accent: vermilion        # indigo, moss, plum, ochre, teal, ink, or any CSS colour
   # logo: assets/logo.svg  # an image in docs/; the Sumi mark is used until you set one
-  # social_image: assets/social.png   # share preview (Sumi 0.2+)
+  # social_image: assets/social.png   # share preview image in docs/
 
 # The first language is the default. Each other one is built into /<code>/ and
 # can override any setting above. Chinese pages live in docs-zh/, with the same
@@ -49,7 +49,7 @@ plugins:
   - sumi:
       git_dates: true      # "last updated" from Git history
       # blog:
-      #   layout: cards    # card view for the blog index (Sumi 0.2+)
+      #   layout: cards    # card view for the blog index
 
 extra:
   social:
