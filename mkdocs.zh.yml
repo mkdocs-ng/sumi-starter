@@ -1,0 +1,33 @@
+# yaml-language-server: $schema=https://mkdocs-ng.github.io/mkdocs/schema.json
+#
+# Chinese site, built into site/zh/. Inherits mkdocs.yml and overrides only
+# what differs. Build the English site first: it cleans site/.
+#
+#   mkdocs build && mkdocs build -f mkdocs.zh.yml
+#   mkdocs serve -f mkdocs.zh.yml      # preview the Chinese site
+
+INHERIT: mkdocs.yml
+
+site_name: 我的项目
+site_description: 用一句话说明这个项目做什么、给谁用。
+site_url: https://example.github.io/my-project/zh/
+docs_dir: docs-zh
+site_dir: site/zh
+edit_uri: edit/main/docs-zh/
+
+theme:
+  locale: zh
+
+extra:
+  alternate:
+    - {name: English, link: ../, lang: en}
+    - {name: 简体中文, link: ./, lang: zh}
+
+nav:
+  - 首页: index.md
+  - 指南:
+    - guide/index.md
+    - 安装: guide/install.md
+    - 快速开始: guide/quick-start.md
+  - 版本发布: releases.md
+  - 博客: blog/index.md

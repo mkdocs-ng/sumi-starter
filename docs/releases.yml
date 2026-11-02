@@ -1,0 +1,17 @@
+# Newest first. `assets` are optional; `sha256` adds a checksum column.
+- version: 1.0.0
+  date: 2026-11-02
+  summary: The first stable release.
+  notes: |
+    - Replace these notes with your release notes. Markdown works here.
+    - Link to the pull requests or issues that matter.
+  assets:
+    - name: my_project-1.0.0-py3-none-any.whl
+      url: https://pypi.org/project/my-project/1.0.0/#files
+      size: 120 KB
+- version: 0.9.0
+  date: 2026-10-15
+  status: prerelease
+  summary: Release candidate.
+  notes: |
+    - The last round of fixes before 1.0.
