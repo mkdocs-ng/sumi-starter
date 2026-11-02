@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://mkdocs-ng.github.io/mkdocs/schema.json
+# yaml-language-server: $schema=https://mkdocs-ng.org/schema.json
 #
 # English site. The Chinese site in mkdocs.zh.yml inherits everything here.
 # Change these first: site_name, site_description, site_url, repo_url.

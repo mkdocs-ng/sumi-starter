@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://mkdocs-ng.github.io/mkdocs/schema.json
+# yaml-language-server: $schema=https://mkdocs-ng.org/schema.json
 #
 # Chinese site, built into site/zh/. Inherits mkdocs.yml and overrides only
 # what differs. Build the English site first: it cleans site/.
