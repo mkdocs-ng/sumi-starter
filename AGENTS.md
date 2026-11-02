@@ -46,4 +46,4 @@ Always run the strict builds before you finish. Broken links, missing nav entrie
 | `$…$`, `$$…$$` | Math. |
 | `++Ctrl+K++`, `:lucide-rocket:` | Keys, inline icon. |
 
-Full reference: https://mkdocs-ng.github.io/mkdocs-sumi/docs/write/ (each page there has a Markdown copy at the same path with `.md`).
+Full reference: https://sumi.mkdocs-ng.org/docs/write/ (each page there has a Markdown copy at the same path with `.md`).
