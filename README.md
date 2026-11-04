@@ -14,24 +14,24 @@ pip install -r requirements.txt
 mkdocs serve
 ```
 
-Open <http://127.0.0.1:8000/>. The Chinese edition runs with `mkdocs serve -f mkdocs.zh.yml`.
+Open <http://127.0.0.1:8000/>. Switch to the Chinese edition with the language menu in the header. Add `--language zh` to build only one language while you work on it.
 
 ## Make it yours
 
 Change things in this order, and check the preview after each step:
 
-1. **Identity** — in `mkdocs.yml`: `site_name`, `site_description`, `site_url`, `repo_url`, `copyright`. Do the same in `mkdocs.zh.yml`.
+1. **Identity** — in `mkdocs.yml`: `site_name`, `site_description`, `site_url`, `repo_url`, `copyright`. Do the same under `languages.zh`.
 2. **Home page** — the front matter of `docs/index.md`: the hero text, buttons, install command and feature cards.
 3. **Content** — replace the pages in `docs/guide/` and `docs/reference/`, and update `nav` in `mkdocs.yml`.
 4. **Releases** — edit `docs/releases.yml`, newest first.
 5. **Blog** — edit `docs/blog/.authors.yml` and the first post, or delete `docs/blog/` and its `nav` entry.
-6. **Languages** — keep `docs-zh/` and `mkdocs.zh.yml`, translate them, or delete both and the `extra.alternate` block.
+6. **Languages** — listed under `languages` in `mkdocs.yml`. Translate the pages in `docs-zh/` (untranslated ones are shown in English with a note), add a language the same way, or delete `docs-zh/` and the `languages` block for an English-only site.
 7. **Brand** — set `theme.accent` and `theme.logo`.
 
 ## Publish on GitHub Pages
 
 1. In your repository, open **Settings → Pages** and set **Source** to **GitHub Actions**.
-2. Push to `main`. The `docs` workflow builds both editions with `--strict` and deploys them. The English site is at the root and the Chinese one at `/zh/`.
+2. Push to `main`. The `docs` workflow builds both languages with `mkdocs build --strict` and deploys them. The English site is at the root and the Chinese one at `/zh/`.
 
 Pull requests are built too, so a broken link fails the check before it is merged.
 
