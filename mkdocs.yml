@@ -19,6 +19,29 @@ theme:
   # logo: assets/logo.svg  # an image in docs/; the Sumi mark is used until you set one
   # social_image: assets/social.png   # share preview image, about 1200x630
 
+  # Optional features. Uncomment a whole block when you are ready to use it.
+  # Every theme option: https://sumi.mkdocs-ng.org/docs/customize/theme/
+  #
+  # announcement: 'My Project 1.0 is out. <a href="https://example.github.io/my-project/blog/">Read the post</a>'
+  #
+  # comments:              # Giscus, backed by GitHub Discussions; ids from giscus.app
+  #   provider: giscus     # https://sumi.mkdocs-ng.org/docs/run/comments/
+  #   repo: example/my-project
+  #   repo_id: R_kgDOxxxxxx
+  #   category: Announcements
+  #   category_id: DIC_kwDOxxxxxx
+  #
+  # feedback: true         # "Was this page helpful?", sent to extra.analytics
+  #
+  # footer_links:          # columns of links above the footer
+  #   - title: Project     # links are site paths (releases/) or full URLs
+  #     links:
+  #       - {text: Releases, link: releases/}
+  #       - {text: Source, link: "https://github.com/example/my-project"}
+  #
+  # version_provider: mike # version menu from mike's versions.json
+  #                        # https://sumi.mkdocs-ng.org/docs/customize/navigation/
+
 # The first language is the default. Each other one is built into /<code>/ and
 # can override any setting above. Chinese pages live in docs-zh/, with the same
 # paths as docs/; a page without a translation is shown in English with a note.
@@ -48,12 +71,16 @@ plugins:
       full_output: true
   - sumi:
       git_dates: true      # "last updated" from Git history
+      # assistant_links: [claude, chatgpt]   # "Open in Claude/ChatGPT" in the page menu
       blog:
         layout: cards      # or: list
 
 extra:
   social:
     - {icon: brand-github, link: "https://github.com/example/my-project", name: GitHub}
+  # analytics:             # Plausible, Umami or Google Analytics (provider: google)
+  #   provider: plausible  # https://sumi.mkdocs-ng.org/docs/run/analytics/
+  #   domain: example.github.io
 
 nav:
   - Home: index.md

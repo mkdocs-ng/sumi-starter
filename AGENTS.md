@@ -16,6 +16,7 @@ Always run the strict build before you finish. Broken links, missing nav entries
 ## Layout
 
 - `mkdocs.yml` — all settings and the English `nav`. Every new page must be added to `nav`, and to `languages.zh.nav`.
+- Commented-out blocks in `mkdocs.yml` (comments, feedback, analytics, announcement, footer links, versions) are optional Sumi features. Uncomment a whole block only when the user asks for that feature and has the ids it needs.
 - `languages` in `mkdocs.yml` — English is the default (site root), Chinese is built into `/zh/`. `languages.zh` overrides `site_name`, `site_description`, `docs_dir`, `edit_uri` and `nav` for Chinese. The language menu is generated; don't add `extra.alternate`.
 - `docs/` — English pages. `docs-zh/` — Chinese pages, same paths. Not every page needs a translation: a missing one is shown in English with a note.
 - `docs/index.md` — the home page. Its content is YAML front matter (`hero`, `sections`) for Sumi's `landing.html` template, not Markdown body text.

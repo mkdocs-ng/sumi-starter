@@ -27,6 +27,7 @@ Change things in this order, and check the preview after each step:
 5. **Blog** — edit `docs/blog/.authors.yml` and the first post, or delete `docs/blog/` and its `nav` entry.
 6. **Languages** — listed under `languages` in `mkdocs.yml`. Translate the pages in `docs-zh/` (untranslated ones are shown in English with a note), add a language the same way, or delete `docs-zh/` and the `languages` block for an English-only site.
 7. **Brand** — set `theme.accent` and `theme.logo`.
+8. **Optional features** — comments, a "Was this page helpful?" widget, analytics, an announcement bar, footer link columns and a version menu are in `mkdocs.yml`, commented out. Uncomment a whole block when you are ready to run it.
 
 ## Publish on GitHub Pages
 
