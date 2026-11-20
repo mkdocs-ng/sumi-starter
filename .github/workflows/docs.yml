@@ -25,6 +25,12 @@ jobs:
           python-version: "3.13"
           cache: pip
       - run: pip install -r requirements.txt
+      # Your GitHub Pages address, so canonical and share links point at the real site.
+      - id: pages
+        if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@v5
+      - if: github.event_name != 'pull_request'
+        run: echo "SITE_URL=${{ steps.pages.outputs.base_url }}/" >> "$GITHUB_ENV"
       - name: Build the site (all languages)
         run: mkdocs build --strict
       - if: github.event_name != 'pull_request'
