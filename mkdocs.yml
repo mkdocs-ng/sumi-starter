@@ -1,12 +1,13 @@
 # yaml-language-server: $schema=https://mkdocs-ng.org/schema.json
 #
 # One file for both languages: English at the root of the site, Chinese at /zh/.
-# Change these first: site_name, site_description, site_url, repo_url, and the
+# Change these first: site_name, site_description, repo_url, and the
 # same keys under languages.zh.
 
 site_name: My Project
 site_description: One sentence that says what My Project does and who it is for.
-site_url: https://example.github.io/my-project/
+# On GitHub Pages the docs workflow sets SITE_URL to your Pages address; set your own if you use a custom domain.
+site_url: !ENV [SITE_URL, https://example.github.io/my-project/]
 repo_url: https://github.com/example/my-project
 repo_name: example/my-project
 edit_uri: edit/main/docs/

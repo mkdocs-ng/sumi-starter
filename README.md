@@ -20,7 +20,7 @@ Open <http://127.0.0.1:8000/>. Switch to the Chinese edition with the language m
 
 Change things in this order, and check the preview after each step:
 
-1. **Identity** — in `mkdocs.yml`: `site_name`, `site_description`, `site_url`, `repo_url`, `copyright`. Do the same under `languages.zh`.
+1. **Identity** — in `mkdocs.yml`: `site_name`, `site_description`, `repo_url`, `copyright`. Do the same under `languages.zh`. On GitHub Pages the `docs` workflow fills in `site_url` for you; set it yourself only for a custom domain.
 2. **Home page** — the front matter of `docs/index.md`: the hero text, buttons, install command and feature cards.
 3. **Content** — replace the pages in `docs/guide/` and `docs/reference/`, and update `nav` in `mkdocs.yml`.
 4. **Releases** — edit `docs/releases.yml`, newest first.
